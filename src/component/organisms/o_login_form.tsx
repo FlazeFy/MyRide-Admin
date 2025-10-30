@@ -30,8 +30,7 @@ const OrganismsLoginForm: React.FunctionComponent<ILoginFormProps> = (props) => 
                         Swal.fire({
                             icon: "error",
                             title: "Login Failed",
-                            text: err.message || "Invalid username or password",
-                            confirmButtonColor: "#d33",
+                            text: err.message || "Invalid username or password"
                         });
                     } finally {
                         setSubmitting(false)
@@ -40,16 +39,12 @@ const OrganismsLoginForm: React.FunctionComponent<ILoginFormProps> = (props) => 
             >
             {({ handleSubmit }) => (
                 <Form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <Label htmlFor="username">Email address / Username</Label>
-                        <Field as={Input} name="username" placeholder="Enter your email"/>
-                        <ErrorMessage name="username" component="div" className="text-red-500 text-sm"/>
-                    </div>
-                    <div>
-                        <Label htmlFor="password">Password</Label>
-                        <Field as={Input} type="password" name="password" placeholder="Enter your password"/>
-                        <ErrorMessage name="password" component="div" className="text-red-500 text-sm"/>
-                    </div>
+                    <Label htmlFor="username">Email address / Username</Label>
+                    <Field as={Input} name="username" placeholder="Enter your email"/>
+                    <ErrorMessage name="username" component="div" className="text-red-500 text-sm"/>
+                    <Label htmlFor="password">Password</Label>
+                    <Field as={Input} type="password" name="password" placeholder="Enter your password"/>
+                    <ErrorMessage name="password" component="div" className="text-red-500 text-sm"/>
                     <Button type="submit" className="btn-success w-full">Enter the Garage</Button>
                 </Form>
             )}

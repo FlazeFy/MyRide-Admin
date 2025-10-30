@@ -183,22 +183,24 @@
 }
 
 /* Container */
-.container {
+.container, .swal2-popup {
   background: var(--whiteColor);
 }
 
 /* Container & Button & Input */
 /* Container */
-.container {
+.container, .swal2-popup {
   border-bottom: var(--spaceXXSM) solid var(--darkColor) !important;
   padding: var(--spaceXLG);
   margin-bottom: var(--spaceLG);
   background: var(--whiteColor);
   position: relative;
-  width: 100%;
   margin-inline: 0;
 }
-button, .container, .plate-number, .chip {
+.container {
+  width: 100%;
+}
+button, .container, .plate-number, .chip, .swal2-popup {
   border-radius: var(--roundedSM) !important;
 }
 label {

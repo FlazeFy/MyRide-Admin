@@ -45,7 +45,7 @@ const OrganismsLoginForm: React.FunctionComponent<ILoginFormProps> = (props) => 
                     <Label htmlFor="password">Password</Label>
                     <Field as={Input} type="password" name="password" placeholder="Enter your password"/>
                     <ErrorMessage name="password" component="div" className="text-red-500 text-sm"/>
-                    <Button type="submit" className="btn-success w-full">Enter the Garage</Button>
+                    <Button type="submit" className="btn-success">Enter the Garage</Button>
                 </Form>
             )}
             </Formik>

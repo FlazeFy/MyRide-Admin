@@ -179,28 +179,66 @@
 
 /* Background */
 .bg-primary {
-  background: var(--warningColor);
+  background: var(--primaryColor) !important;
+}
+.bg-info {
+  background: var(--infoColor) !important;
+}
+.bg-success {
+  background: var(--successColor) !important;
+}
+.bg-warning {
+  background: var(--warningColor) !important;
+}
+.bg-danger {
+  background: var(--dangerColor) !important;
+}
+
+.container, .swal2-popup, .popover, .plate-number, .chip {
+  border: 2px solid var(--darkColor) !important;
+}
+.plate-number {
+  background:var(--warningColor) !important; 
+  z-index: 999;
+}
+.chip-mini {
+  font-size:var(--textSM); 
+  border-radius: var(--roundedLG);
+  color: var(--whiteColor);
+  font-weight: 600;
+  margin-inline: var(--spaceXXSM);
+}
+.chip, .plate-number, .chip-mini {
+  padding: var(--spaceMini) var(--spaceSM) !important;
+}
+.chip, .plate-number {
+  font-weight: bold;
+  margin-inline: var(--spaceSM);
+  font-size:var(--textMD); 
+  color: var(--darkColor);
 }
 
 /* Container */
-.container, .swal2-popup {
+.container, .swal2-popup, .plate-number {
   background: var(--whiteColor);
 }
 
 /* Container & Button & Input */
 /* Container */
-.container, .swal2-popup {
+.container, .swal2-popup, .plate-number, button, .chip {
   border-bottom: var(--spaceXXSM) solid var(--darkColor) !important;
   padding: var(--spaceXLG);
-  margin-bottom: var(--spaceLG);
-  background: var(--whiteColor);
   position: relative;
   margin-inline: 0;
+}
+.container, .swal2-popup, .plate-number, button {
+  margin-bottom: var(--spaceLG);
+  background: var(--whiteColor);
 }
 .container {
   width: 100%;
 }
-button, .container, .plate-number, .chip, .swal2-popup {
+button, .container, .plate-number, .chip, .swal2-popup, .plate-number {
   border-radius: var(--roundedSM) !important;
 }
 label {
@@ -242,6 +280,29 @@ button:hover, .hover-grow:hover {
 }
 .modal-content, .swal2-popup, .popover, button:hover, .container-landing {
   box-shadow: rgba(0, 0, 0, 0.2) 1.975px 1.975px 2.8px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;   
+  width: 100%;
+  margin-top: var(--spaceXMD);
+  border: 1.75px solid var(--darkColor) !important;
+}
+th, td {
+  text-align: center;         
+  vertical-align: middle;    
+  border: 1.75px solid var(--darkColor) !important; 
+}
+thead th {
+  text-align: center;
+  background: var(--primaryColor) !important;
+  color: var(--whiteColor);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+table tbody p {
+  font-size: var(--textXMD);
 }
 
 /* Typography */

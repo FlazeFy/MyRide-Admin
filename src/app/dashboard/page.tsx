@@ -1,4 +1,5 @@
 import OrganismsSummaryAppsBox from '@/component/organisms/o_summary_apps_box';
+import OrganismsTotalTripMonthly from '@/component/organisms/o_total_trip_monthly';
 import OrganismsVehicleReadinessBox from '@/component/organisms/o_vehicle_readiness_box';
 import * as React from 'react';
 
@@ -10,6 +11,7 @@ const DashboardPage: React.FunctionComponent<IDashboardPageProps> = (props) => {
         <div className='items-center justify-center min-h-screen bg-warning p-5'>
             <OrganismsSummaryAppsBox/>
             <OrganismsVehicleReadinessBox/>
+            <OrganismsTotalTripMonthly/>
         </div>
     )
 };

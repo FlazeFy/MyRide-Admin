@@ -41,9 +41,7 @@ const OrganismsVehicleReadinessBox: React.FunctionComponent<IVehicleReadinessBox
                     </td>
                     <td className="text-left py-2">
                         <p className="m-0 font-medium">
-                        {dt.vehicle_name} 
-                        {dt.vehicle_transmission == 'Automatic' ? 'AT' : dt.vehicle_transmission == 'Manual' ? 'MT' : dt.vehicle_transmission}
-                        {dt.deleted_at ? '<span className="ml-2 inline-block rounded-full bg-red-500 text-white text-xs px-2 py-[2px]">Deleted</span>' : ''}
+                            {dt.vehicle_name} {dt.vehicle_transmission == 'Automatic' ? 'AT' : dt.vehicle_transmission == 'Manual' ? 'MT' : dt.vehicle_transmission} {dt.deleted_at ? '<span className="ml-2 inline-block rounded-full bg-red-500 text-white text-xs px-2 py-[2px]">Deleted</span>' : ''}
                         </p>
                         <p className="m-0 text-gray-500 text-sm">{dt.vehicle_type}</p>
                     </td>
@@ -83,7 +81,7 @@ const OrganismsVehicleReadinessBox: React.FunctionComponent<IVehicleReadinessBox
                     </tr>
                 </thead>
                 <tbody>
-                {
+                    {
                         loading ? (
                             <tr>
                                 <td colSpan={6} className="px-2 py-4 text-gray-500">

@@ -45,3 +45,15 @@ export const getTotalServiceMonthly = async (year:number,context:string) => {
         throw error.response?.data || { message: "Fetch failed" }
     }
 };
+
+export const getTotalCleanMonthly = async (year:number,context:string) => {
+    try {
+        const res = await axios.get(
+            `http://127.0.0.1:8000/api/v1/stats/total/clean/monthly/${context}/${year}`
+        )
+
+        return res.data.data
+    } catch (error) {
+        throw error.response?.data || { message: "Fetch failed" }
+    }
+};

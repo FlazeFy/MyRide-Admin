@@ -1,4 +1,5 @@
 import OrganismsSummaryAppsBox from '@/component/organisms/o_summary_apps_box';
+import OrganismsTotalCleanMonthly from '@/component/organisms/o_total_clean_monthly';
 import OrganismsTotalFuelMonthly from '@/component/organisms/o_total_fuel_monthly';
 import OrganismsTotalServiceMonthly from '@/component/organisms/o_total_service_monthly';
 import OrganismsTotalTripMonthly from '@/component/organisms/o_total_trip_monthly';
@@ -16,6 +17,7 @@ const DashboardPage: React.FunctionComponent<IDashboardPageProps> = (props) => {
             <OrganismsTotalTripMonthly/>
             <OrganismsTotalFuelMonthly/>
             <OrganismsTotalServiceMonthly/>
+            <OrganismsTotalCleanMonthly/>
         </div>
     )
 };

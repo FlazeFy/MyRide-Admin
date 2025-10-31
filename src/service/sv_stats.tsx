@@ -21,3 +21,15 @@ export const getTotalTripMonthly = async (year:number) => {
         throw error.response?.data || { message: "Fetch failed" }
     }
 };
+
+export const getTotalFuelMonthly = async (year:number,context:string) => {
+    try {
+        const res = await axios.get(
+            `http://127.0.0.1:8000/api/v1/stats/total/fuel/monthly/${context}/${year}`
+        )
+
+        return res.data.data
+    } catch (error) {
+        throw error.response?.data || { message: "Fetch failed" }
+    }
+};
